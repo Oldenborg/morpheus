@@ -1,0 +1,66 @@
+html, body {
+  height: 100%; }
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 300px; }
+
+a {
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; }
+  a.b {
+    border: 1px solid #EEE;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    background-color: #EEE; }
+    a.b.p {
+      color: white;
+      border-color: purple;
+      background-color: purple; }
+    a.b.a {
+      color: purple;
+      border-color: purple;
+      background-color: initial; }
+      a.b.a:hover {
+        color: white;
+        background-color: purple; }
+
+body.row {
+  margin: 0; }
+  body.row > section {
+    height: 100%; }
+
+#image {
+  position: relative;
+  background: #EEE; }
+  #image #navigation {
+    text-align: right;
+    right: 0;
+    bottom: 10%;
+    position: absolute; }
+    #image #navigation nav div {
+      margin-bottom: 2px; }
+      #image #navigation nav div a {
+        opacity: 0.6;
+        background: #FFF;
+        display: inline-block;
+        height: 2rem;
+        line-height: 2rem;
+        padding: 0.5rem 1rem; }
+        #image #navigation nav div a:hover {
+          padding-right: 4rem; }
+        #image #navigation nav div a.active {
+          opacity: 1; }
+
+#content {
+  padding: 1rem 2rem;
+  background: #FFF; }
+  #content #coffee {
+    float: right; }
+  #content h1:first-of-type {
+    margin-top: 0; }
+
+/*# sourceMappingURL=main.css.map */
