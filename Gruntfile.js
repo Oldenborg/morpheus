@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Project configuration.
     grunt.initConfig({
@@ -43,6 +44,17 @@ module.exports = function(grunt) {
             }
         },
         
+        copy: {
+            main: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/assets',
+                    src: ['**'],
+                    dest: 'dist/'
+                }]
+            }
+        },
+        
         watch: {
             slim: {
                 files: ['src/slim/**/*.slim'],
@@ -51,11 +63,15 @@ module.exports = function(grunt) {
             sass: {
                 files: ['src/sass/**/*.sass'],
                 tasks: ['sass', 'concat'],
+            },
+            copy: {
+                files: ['src/assets/**/*'],
+                tasks: ['copy'],
             }
         }
 
     });
     
-    grunt.registerTask('default', ['sass', 'slim', 'concat', 'watch']);
+    grunt.registerTask('default', ['sass', 'slim', 'concat', 'copy', 'watch']);
 
 };

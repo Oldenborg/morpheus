@@ -1,5 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
 html, body {
-  height: 100%; }
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  font-size: 1.2rem; }
+
+h1 {
+  font-weight: 200;
+  font-size: 3rem; }
+  h1 small {
+    font-size: 2rem;
+    display: block;
+    color: #CCC; }
+
+p.lead {
+  font-size: 1.5rem;
+  font-weight: 100; }
+
+ul.n {
+  list-style: none;
+  padding: 0; }
+  ul.n li {
+    line-height: 3rem; }
+ul.i img.i {
+  vertical-align: middle;
+  margin-right: 0.5rem; }
 
 textarea {
   display: block;
@@ -12,21 +36,21 @@ a {
   font-size: 1rem;
   text-decoration: none; }
   a.b {
-    border: 1px solid #EEE;
+    border: 1px solid #CCC;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
-    background-color: #EEE; }
+    background-color: #CCC; }
     a.b.p {
-      color: white;
-      border-color: purple;
-      background-color: purple; }
+      color: #FFF;
+      border-color: #2faeff;
+      background-color: #2faeff; }
     a.b.a {
-      color: purple;
-      border-color: purple;
+      color: #2faeff;
+      border-color: #2faeff;
       background-color: initial; }
       a.b.a:hover {
         color: white;
-        background-color: purple; }
+        background-color: #2faeff; }
 
 body.row {
   margin: 0; }
@@ -34,9 +58,19 @@ body.row {
     height: 100%; }
 
 #image {
-  position: relative;
-  background: #EEE; }
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: inherit;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: value;
+  background-size: cover;
+  background-color: #030c0d;
+  z-index: 0;
+  position: relative; }
   #image #navigation {
+    z-index: 1;
     text-align: right;
     right: 0;
     bottom: 10%;
@@ -44,20 +78,26 @@ body.row {
     #image #navigation nav div {
       margin-bottom: 2px; }
       #image #navigation nav div a {
-        opacity: 0.6;
         background: #FFF;
         display: inline-block;
         height: 2rem;
         line-height: 2rem;
-        padding: 0.5rem 1rem; }
+        padding: 0.5rem 1rem;
+        padding-right: 2rem; }
         #image #navigation nav div a:hover {
-          padding-right: 4rem; }
+          padding-right: 3rem; }
         #image #navigation nav div a.active {
-          opacity: 1; }
+          background: #2faeff; }
 
 #content {
-  padding: 1rem 2rem;
-  background: #FFF; }
+  z-index: 2;
+  padding: 2rem;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: value;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2); }
   #content #coffee {
     float: right; }
   #content h1:first-of-type {

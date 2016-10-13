@@ -1,5 +1,44 @@
+@import mix
+@import colors
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
 html, body
+    font-family: 'Lato', sans-serif
     height: 100%
+    font-size: 1.2rem
+
+h1
+    font-weight: 200
+    font-size: 3rem
+
+    small
+        font-size: 2rem
+        display: block
+        color: $gray
+
+p.lead
+    font-size: 1.5rem
+    font-weight: 100
+
+
+i
+    
+
+
+ul
+    &.n
+        list-style: none
+        padding: 0
+
+        li
+            line-height: 3rem
+
+    &.i
+        img.i
+            vertical-align: middle
+            margin-right: 0.5rem
+  
+    
 
 textarea
     display: block
@@ -7,33 +46,33 @@ textarea
     height: 300px
 
 a
-    color: #333
+    color: $asphalt
     cursor: pointer
     font-size: 1rem
     text-decoration: none
 
     // b for button
     &.b
-        border: 1px solid #EEE
+        border: 1px solid $gray
         padding: 0.5rem 1rem
         border-radius: 0.4rem
-        background-color: #EEE
+        background-color: $gray
 
         // bp for button primary
         &.p
-            color: white
-            border-color: purple
-            background-color: purple
+            color: $white
+            border-color: $primary
+            background-color: $primary
 
         // ba for button alternative
         &.a
-            color: purple
-            border-color: purple 
+            color: $primary
+            border-color: $primary 
             background-color: initial
 
             &:hover
                 color: white
-                background-color: purple
+                background-color: $primary
             
 
 body.row
@@ -43,10 +82,19 @@ body.row
         height: 100%
 
 #image
+
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: inherit
+    +vendor(background-size, cover)
+    background-color: #030c0d
+
+
+    z-index: 0
     position: relative
-    background: #EEE
 
     #navigation
+        z-index: 1
         text-align: right
         right: 0
         bottom: 10%
@@ -58,25 +106,26 @@ body.row
                 margin-bottom: 2px
 
                 a
-                    opacity: 0.6
                     background: #FFF
                     display: inline-block
                     height: 2rem
                     line-height: 2rem
                     padding: 0.5rem 1rem
+                    padding-right: 2rem
 
                     &:hover
-                        padding-right: 4rem
+                        padding-right: 3rem
                     
 
                     &.active
-                        opacity: 1
-
+                        background: $primary
 
 
 #content
-    padding: 1rem 2rem
-    background: #FFF
+    z-index: 2
+    padding: 2rem
+    background: $white
+    +vendor(box-shadow, 0px 0px 50px 10px $shadow)
 
     #coffee
         float: right

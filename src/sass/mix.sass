@@ -1,0 +1,29 @@
+=vendor($attribute, $value)
+    -webkit-#{$attribute}: #{$value}
+    -ms-#{$attribute}: #{$value}
+    -moz-#{$attribute}: #{$value}
+    -o-#{$attribute}: #{value}
+    #{$attribute}: #{$value}
+
+=e($name)
+    @at-root #{&}__#{$name}
+        @content
+
+=has($name)
+    @at-root #{&}__#{$name}
+        @content
+
+=m($name)
+    @at-root #{&}--#{$name}
+        @content
+
+=when($name)
+    @at-root #{&}--#{$name}
+        @content
+
+=is($name)
+    @at-root #{&}--#{$name}
+        @content
+
+=circle()
+    +vendor('border-radius', '100%')
